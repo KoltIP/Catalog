@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Catalog.Data;
-using Catalog.Areas.Identity.Data;
+using Catalog.Areas.Identity.Data.Context;
+using Catalog.Areas.Identity.Data.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("CatalogDbContextConnection") ?? throw new InvalidOperationException("Connection string 'CatalogDbContextConnection' not found.");
