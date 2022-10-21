@@ -1,9 +1,11 @@
 ﻿using Catalog.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Catalog.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -15,7 +17,6 @@ namespace Catalog.Controllers
 
         public IActionResult Index()
         {
-            //return Redirect("/Identity/Account/Login");
             return View();
         }
 

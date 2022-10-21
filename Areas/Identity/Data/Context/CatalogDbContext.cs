@@ -1,9 +1,9 @@
-﻿using Catalog.Areas.Identity.Data;
+﻿using Catalog.Areas.Identity.Data.Entity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Catalog.Data;
+namespace Catalog.Areas.Identity.Data.Context;
 
 public class CatalogDbContext : IdentityDbContext<ApplicationUser>
 {
@@ -17,6 +17,6 @@ public class CatalogDbContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder);        
+        base.OnModelCreating(builder);
     }
 }
